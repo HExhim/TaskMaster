@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--      APP METADATA    -->
+
+    <string name="app_name">Task Manager and Productivity Tracker</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string> <!-- TODO: Remove if unused -->
+
+
+    <!--      AUTHENTICATION  -->
+
+    <string name="login_title">Login</string>
+    <string name="login">Login</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="have_account_login">Already have an account? Login</string>
+
+
+    <!--      MAIN ACTIONS    -->
+
+    <string name="AddTask">Add Task</string>
+    <string name="AddProject">Add Project</string>
+    <string name="AddReminder">Add Reminder</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="delete_reminder">Delete Reminder</string>
+    <string name="mark_as_complete">Mark as Complete</string>
+    <string name="mark_as_incomplete">Mark as Incomplete</string>
+    <string name="btn_save">Save Task</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="action_settings">Settings</string>
+    <string name="filter">Filter</string>
+    <string name="export">Export</string>
+
+
+    <!--      TASK DETAILS    -->
+
+    <!-- Labels -->
+    <string name="description_label">Description</string>
+    <string name="dates_section_title">Dates</string>
+    <string name="reminder_section_title">Reminder</string>
+    <string name="progress_section_title">Progress</string>
+    <string name="priority_chip_text">Priority: %1$s</string>
+    <string name="tag_chip_text">Tag: %1$s</string>
+
+    <!-- Placeholders -->
+    <string name="start_date_label">Start Date: %1$s</string>
+    <string name="deadline_label">Deadline: %1$s</string>
+    <string name="created_at_label">Created At: %1$s</string>
+    <string name="reminder_time_label">Reminder Time: %1$s</string>
+    <string name="progress_percent_placeholder">%1$d%% Complete</string>
+
+    <!-- Empty States -->
+    <string name="no_description_available">No description available</string>
+    <string name="no_reminder_set">No reminder set</string>
+    <string name="no_start_date">Start date not set</string>
+    <string name="no_deadline_set">Deadline not set</string>
+    <string name="no_created_date">Created date not available</string>
+
+    <!--      TASK FORM       -->
+
+    <!-- Hints -->
+    <string name="hint_task_title">Task Title</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_start_date">Start Date</string>
+    <string name="hint_due_date">Due Date</string>
+    <string name="hint_reminder">Reminder Date &amp; Time</string>
+
+    <!-- Labels -->
+    <string name="label_priority">Priority</string>
+    <string name="label_project">Project</string>
+    <string name="label_status">Status</string>
+    <string name="label_category">Category</string>
+    <string name="label_recurrence">Recurrence</string>
+    <string name="label_tag">Tag</string>
+    <string name="label_reminder">Reminders (Optional)</string>
+    <string name="label_attachments">Attachments (Optional)</string>
+    <string name="label_color">Select Color</string>
+
+    <!-- Buttons -->
+    <string name="btn_attach_file">Attach File</string>
+    <string name="tooltip_reminder">Set Reminder</string>
+
+    <!--      TIMER           -->
+    <string name="pomodoro_timer">Pomodoro Timer</string>
+    <string name="short_break">Short Break</string>
+    <string name="long_break">Long Break</string>
+    <string name="countdown_timer">Countdown Timer</string>
+    <string name="stopwatch">Stopwatch</string>
+    <string name="times_up">Time\'s up!</string>
+    <string name="long_break_suggested">Long Break Suggested</string>
+    <string name="short_break_suggested">Short Break Suggested</string>
+    <string name="long_break_message">You\'ve completed several pomodoros. Take a 15-minute break!</string>
+    <string name="short_break_message">Good work! Take a 5-minute break.</string>
+    <string name="start_break">Start Break</string>
+    <string name="continue_working">Continue Working</string>
+
+        <string name="pomodoro_settings_title">Pomodoro Settings</string>
+        <string name="pomodoro_duration_label">Pomodoro Duration</string>
+        <string name="short_break_duration_label">Short Break Duration</string>
+        <string name="long_break_duration_label">Long Break Duration</string>
+        <string name="minutes_format">%d min</string>
+        <string name="pomodoro_timer_title">Pomodoro</string>
+        <string name="demo_task_name">Demo Task Name</string>
+        <string name="initial_timer_value">25:00</string>
+        <string name="skip_button_text">Skip</string>
+        <string name="done_button_text">Done</string>
+
+
+    <!--      INSIGHTS        -->
+    <string name="insights">Insights</string>
+    <string name="all">All</string>
+    <string name="today">Today</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="productivity_overview">Productivity</string>
+    <string name="tasks_created_completed">Tasks Completed</string>
+    <string name="completion_rate">Completion Rate</string>
+    <string name="time_spent_analysis">Time Spent</string>
+    <string name="task_productive_day">Productive Day</string>
+    <string name="task_productivity_hour">Productivity Hours</string>
+    <string name="task_priority_distribution">Priority Distribution</string>
+    <string name="task_trends">Trends</string>
+
+    <!--      SORT/FILTER     -->
+    <string name="sort">Sort</string>
+    <string name="sort_date_newest">Date (Newest First)</string>
+    <string name="sort_date_oldest">Date (Oldest First)</string>
+    <string name="sort_duration_longest">Duration (Longest First)</string>
+    <string name="sort_duration_shortest">Duration (Shortest First)</string>
+    <string name="view_options">View Options</string>
+    <string name="compact_view">Compact View</string>
+    <string name="show_completed">Show Completed</string>
+    
+    <string-array name="sort_log_options">
+        <item>Date (Newest First)</item>
+        <item>Date (Oldest First)</item>
+        <item>Duration (Longest First)</item>
+        <item>Duration (Shortest First)</item>
+    </string-array>
+
+
+    <string-array name="source_filter_log_options">
+        <item>All</item>
+        <item>Manual</item>
+        <item>Pomodoro</item>
+        <item>Stopwatch</item>
+    </string-array>
+
+    <!--      CATEGORIES      -->
+    <string name="category_name_required">Category name is required</string>
+    <string name="choose_color">Choose Color</string>
+    <string name="ok">OK</string>
+    <string name="color_picker_option">Color option</string>
+
+    <!--      MISC/UI         -->
+    <string name="task_header_image">Task Header Image</string>
+    <string name="progress_status_label">Progress Status</string>
+
+    <!-- Sample Content -->
+    <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.</string>
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="reminder_time_placeholder">The App Is Pretty.</string>
+
+    <!--      TOASTS          -->
+    <string name="task_marked_complete">Task marked as complete</string>
+    <string name="task_deleted_successfully">Task deleted successfully</string>
+    <string name="error_deleting_task">Error deleting task. Please try again</string>
+    <string name="TaskType">TaskType</string>
+    <string name="task_analytics">Task Analytics\n</string>
+</resources>

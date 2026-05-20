@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="?attr/colorSurfaceVariant"
+    android:clipToPadding="false">
+
+    <!-- Category Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:hint="Category Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/category_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textCapWords"
+            tools:text="Work Tasks" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Color Selection Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Color"
+        style="@style/TextAppearance.Material3.LabelLarge"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp">
+
+        <!-- Color Preview -->
+        <View
+            android:id="@+id/color_preview"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:elevation="4dp"
+            android:outlineAmbientShadowColor="@android:color/black"
+            android:outlineSpotShadowColor="@android:color/black"
+            android:clipToOutline="true"
+            android:shape="oval" />
+
+        <!-- Color Picker Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/color_picker_button"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Choose Color"
+            android:textColor="?attr/colorOnSurface"
+            app:icon="@drawable/ic_color"
+            app:iconTint="?attr/colorOnSurface"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp" />
+    </LinearLayout>
+
+    <!-- Save Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_button"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Save"
+        app:iconGravity="textEnd"
+        app:iconPadding="8dp" />
+</LinearLayout>

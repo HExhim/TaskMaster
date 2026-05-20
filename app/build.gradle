@@ -1,0 +1,86 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.googleServices)
+}
+
+android {
+    namespace = "com.twa.taskmaster"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.twa.taskmaster"
+        minSdk = 26
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.constraintlayout)
+    implementation libs.preference
+
+    // Testing
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+
+    // AndroidX Core and Lifecycle
+    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.6.0")
+    implementation("androidx.lifecycle:lifecycle-livedata:2.6.0")
+
+    // Room Database
+    implementation("androidx.room:room-runtime:2.5.1")
+    annotationProcessor("androidx.room:room-compiler:2.5.1")
+    implementation("androidx.room:room-ktx:2.5.1")
+
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.1.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation ("com.google.android.gms:play-services-auth:19.2.0")
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-messaging")
+
+    // Navigation
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+
+    // WorkManager
+    implementation("androidx.work:work-runtime:2.8.1")
+
+    // Charts
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    //GSON
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+
+
+}

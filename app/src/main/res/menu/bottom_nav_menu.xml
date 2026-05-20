@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Task"
+        android:icon="@android:drawable/ic_search_category_default"
+        android:title="Tasks" />
+
+    <item
+        android:id="@+id/Calendar"
+        android:icon="@drawable/ic_calendar"
+        android:title="Calendar" />
+
+    <item
+        android:id="@+id/Insights"
+        android:icon="@drawable/ic_analytics"
+        android:title="Insights" />
+
+    <item
+        android:id="@+id/Settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Setting"/>
+
+</menu>

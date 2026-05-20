@@ -1,0 +1,15 @@
+<!-- res/menu/task_details_nav_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_details"
+        android:title="Details"
+        android:icon="@drawable/ic_info" />
+    <item
+        android:id="@+id/nav_analytics"
+        android:title="Analytics"
+        android:icon="@drawable/ic_analytics" />
+    <item
+        android:id="@+id/nav_logs"
+        android:title="Logs"
+        android:icon="@drawable/ic_log" />
+</menu>

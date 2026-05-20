@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIconTint="?attr/colorOnSurface"
+            app:title="Task Calendar"
+            app:titleTextColor="@color/colorOnSurface"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:elevation="10dp"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout" />
+
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:mcv_selectionColor="?attr/colorPrimary"
+        app:mcv_showOtherDates="defaults"
+        app:mcv_arrowColor="?attr/colorOnSurface"
+        app:mcv_dateTextAppearance="@style/CalendarDate"
+        app:mcv_weekDayTextAppearance="@style/CalendarWeekDay"
+        app:mcv_tileHeight="60dp"
+        android:firstDayOfWeek="3"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="?attr/colorSurfaceVariant"
+        app:layout_constraintTop_toBottomOf="@id/calendarView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- ListView (visible when calendar shown and a date is selected) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taskRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- "No Tasks" Text -->
+    <TextView
+        android:id="@+id/noTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nothing on this date"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="@id/taskRecyclerView"
+        app:layout_constraintBottom_toBottomOf="@id/taskRecyclerView"
+        app:layout_constraintStart_toStartOf="@id/taskRecyclerView"
+        app:layout_constraintEnd_toEndOf="@id/taskRecyclerView" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addcalenderEvent"
+        android:src="@drawable/ic_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="8dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

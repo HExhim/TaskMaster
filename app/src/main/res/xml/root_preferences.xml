@@ -1,0 +1,64 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Account">
+        <Preference android:key="account_email" android:title="Signed in as" android:summary="email@example.com" />
+        <Preference android:key="logout" android:title="Sign Out" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Reminders &amp; Notifications">
+        <SwitchPreferenceCompat
+            android:key="reminders_enabled"
+            android:title="Enable Task Reminders"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="daily_summary_enabled"
+            android:title="Daily Productivity Summary"
+            android:defaultValue="true" />
+        <Preference
+            android:key="daily_report_time"
+            android:title="Daily Report Time"
+            android:summary="Set the time for your daily summary"
+            android:enabled="true"
+            android:dependency="daily_summary_enabled"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Data &amp; Sync">
+        <SwitchPreferenceCompat
+            android:key="enable_sync"
+            android:title="Enable Auto Sync"
+            android:defaultValue="true" />
+        <Preference
+            android:key="manual_sync"
+            android:title="Sync Now"
+            android:summary="Manually trigger a sync with Firebase" />
+        <Preference
+            android:key="manual_backup"
+            android:title="Backup Data"
+            android:summary="Save a local copy of your data" />
+        <Preference
+            android:key="manual_restore"
+            android:title="Restore Data"
+            android:summary="Restore data from a local backup" />
+        <Preference
+            android:key="delete_backup"
+            android:title="Delete Backup"
+            android:summary="Delete the local backup file" />
+        <Preference
+            android:key="export_data"
+            android:title="Export as CSV"
+            android:summary="Export your tasks to a CSV file" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Appearance">
+        <ListPreference
+            android:key="theme_preference"
+            android:title="App Theme"
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="system" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

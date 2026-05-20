@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeColor="?attr/colorOutline"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <View
+            android:id="@+id/task_priority_indicator"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="@color/priority_high"
+            app:layout_constraintBottom_toBottomOf="@id/task_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/task_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintEnd_toStartOf="@id/task_type_chip"
+            app:layout_constraintStart_toEndOf="@id/task_priority_indicator"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Scheduled Weekly Review Meeting" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/task_type_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Scheduled"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            app:chipBackgroundColor="?attr/colorSecondaryContainer"
+            app:chipCornerRadius="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/task_title"
+            app:layout_constraintEnd_toStartOf="@id/task_status_chip" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/task_status_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Planned"
+            app:chipCornerRadius="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/task_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/task_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/task_title"
+            app:layout_constraintTop_toBottomOf="@id/task_title"
+            tools:text="Prepare slides and discussion points for the Q3 project review." />
+
+        <!-- Scheduled Time Row -->
+        <ImageView
+            android:id="@+id/start_time_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="Start Time Icon"
+            android:src="@drawable/ic_play"
+            app:layout_constraintStart_toStartOf="@id/task_title"
+            app:layout_constraintTop_toBottomOf="@id/task_description"
+            app:tint="?attr/colorSecondary" />
+
+        <TextView
+            android:id="@+id/task_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start: Tomorrow, 9:00 AM"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+            android:textColor="?attr/colorSecondary"
+            app:layout_constraintBottom_toBottomOf="@id/start_time_icon"
+            app:layout_constraintStart_toEndOf="@id/start_time_icon"
+            app:layout_constraintTop_toTopOf="@id/start_time_icon" />
+
+        <ImageView
+            android:id="@+id/deadline_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="Deadline Icon"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintBottom_toBottomOf="@id/task_due_date"
+            app:layout_constraintStart_toEndOf="@id/task_due_date"
+            app:layout_constraintTop_toTopOf="@id/task_due_date"
+            app:tint="?attr/colorError" />
+
+        <TextView
+            android:id="@+id/task_deadline_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End: Tomorrow, 10:00 AM"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+            android:textColor="?attr/colorError"
+            app:layout_constraintBottom_toBottomOf="@id/deadline_icon"
+            app:layout_constraintStart_toEndOf="@id/deadline_icon"
+            app:layout_constraintTop_toTopOf="@id/deadline_icon" />
+
+
+        <!-- Time Tracking Row -->
+        <ImageView
+            android:id="@+id/time_spent_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="Time Spent Icon"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintStart_toStartOf="@id/task_title"
+            app:layout_constraintTop_toBottomOf="@id/start_time_icon"
+            app:tint="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:id="@+id/task_time_spent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0h 0m"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintBottom_toBottomOf="@id/time_spent_icon"
+            app:layout_constraintStart_toEndOf="@id/time_spent_icon"
+            app:layout_constraintTop_toTopOf="@id/time_spent_icon" />
+
+        <!-- Timer Controls -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pomodoro"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="Pomodoro"
+            app:icon="@drawable/ic_pomodoro"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:iconTint="?attr/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@id/task_title"
+            app:layout_constraintTop_toBottomOf="@id/time_spent_icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_stopwatch"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:text="Stopwatch"
+            app:icon="@drawable/ic_stopwatch"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:iconTint="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@id/btn_pomodoro" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+        <!-- View Details Button -->
+        <Button
+            android:id="@+id/btn_view_details"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="View Details"
+            app:icon="@drawable/ic_arrow_right"
+            app:iconGravity="textEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_pomodoro" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

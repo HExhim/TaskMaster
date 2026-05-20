@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_background"
+    android:paddingTop="16dp"
+    android:paddingBottom="24dp"
+    android:paddingHorizontal="20dp">
+
+    <!-- Drag Handle -->
+    <View
+        android:id="@+id/drag_handle"
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:background="@drawable/drag_handle"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/bottom_sheet_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tasks for May 9"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="?android:textColorPrimary"
+        android:layout_gravity="start"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_Labels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+    <!-- Empty View -->
+    <TextView
+        android:id="@+id/text_no_tasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No tasks for this day."
+        android:gravity="center"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="?android:textColorSecondary"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

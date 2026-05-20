@@ -1,0 +1,122 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.TaskMaster" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="preferenceTheme">@style/CustomPreferenceStyle</item>
+        <!-- Primary brand color -->
+        <item name="colorPrimary">#1E88E5</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#C2185B</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <!-- Surface & background -->
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorSurfaceVariant">#E3F2FD</item>
+        <item name="colorOnSurface">#212121</item>
+        <item name="colorOnSurfaceVariant">#455A64</item>
+
+        <!-- Outline and error -->
+        <item name="colorOutline">#BDBDBD</item>
+        <item name="colorError">#D32F2F</item>
+
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeStyle">@style/Widget.TaskMaster.ActionMode</item>
+        <item name="android:actionModeStyle">@style/Widget.TaskMaster.ActionMode</item>
+
+    </style>
+
+    <style name="GoogleButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:typeface">normal</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">#757575</item>
+    </style>
+
+    <style name="customFab" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="shapeAppearanceOverlay">@style/roundFab</item>
+    </style>
+
+    <style name="roundFab">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.TaskMaster.TimerButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CalendarWeekDay" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="CalendarDate" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Theme.TaskMaster.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/colorSurface</item>
+    </style>
+
+    <!-- Custom preference overlay -->
+    <style name="CustomPreferenceStyle" parent="PreferenceThemeOverlay">
+        <item name="preferenceCategoryStyle">@style/CustomPreferenceCategory</item>
+        <item name="preferenceStyle">@style/CustomPreference</item>
+        <item name="switchPreferenceCompatStyle">@style/CustomSwitchPreference</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+
+    <style name="CustomPreference" parent="Preference.Information">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:iconTint">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CustomPreferenceCategory" parent="Preference.Category">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CustomSwitchPreference" parent="Preference.SwitchPreferenceCompat">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="colorSwitchThumbNormal">?attr/colorPrimary</item>
+        <!-- For switch thumb and track, see note below -->
+    </style>
+
+
+    <style name="LogTimeText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LogDetailText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+
+    <style name="Widget.TaskMaster.ActionMode" parent="Widget.AppCompat.ActionMode">
+        <item name="background">?attr/colorSurface</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="titleTextStyle">?attr/colorOnSurface</item>
+        <item name="iconTint">?attr/colorOnSurface</item>
+    </style>
+
+
+</resources>

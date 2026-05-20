@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#e2e2e2</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="colorSecondary">#03DAC6</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#F6F6F6</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorOnBackground">#000000</color>
+    <color name="colorOnSurface">#000000</color>
+    <color name="light_gray">#F2F2F2</color>
+    <color name="medium_gray">#808080</color>
+    <color name="dark_gray">#333333</color>
+
+    <color name="selection_highlight">#448AEF</color> <!-- Light Blue A200 -->
+
+    <!-- Light theme colors -->
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <color name="bottom_nav_color">#FFFFFF</color>
+
+    <color name="priority_high">#FF5252</color>
+    <color name="priority_medium">#FF9800</color>
+    <color name="priority_low">#4CAF50</color>
+
+    <color name="status_in_progress_bg">#E3F2FD</color>
+    <color name="status_in_progress_border">#2196F3</color>
+    <color name="status_completed_bg">#E8F5E9</color>
+    <color name="status_completed_border">#4CAF50</color>
+    <color name="status_overdue_bg">#FDECEA</color>
+    <color name="status_todo_bg">#FF9800</color>
+
+    <color name="green_800">#2E7D32</color>
+    <color name="red_800">#C62828</color>                 <!-- deep red text -->
+    <color name="blue_800">#1565C0</color>                 <!-- deep blue text -->
+
+    <!-- Chip Backgrounds -->
+    <color name="blue_100">#DBEAFE</color>
+    <color name="yellow_100">#FEF9C3</color>
+    <color name="green_100">#DCFCE7</color>
+    <color name="gray_400">#9CA3AF</color> <!-- gray-400 -->
+    <color name="gray_700">#4B5563</color> <!-- gray-700 -->
+    <color name="orange_800">#FF800D</color>
+
+    <color name="chart_completed">#4CAF50</color>
+    <color name="chart_created">#2196F3</color>
+    <color name="chart_overdue">#F44336</color>
+    <color name="chart_work">#FF9800</color>
+    <color name="chart_personal">#9C27B0</color>
+    <color name="chart_other">#607D8B</color>
+
+</resources>
+

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/action_sync"
+            android:title="Sync Now"
+            app:showAsAction="ifRoom"
+            android:icon="@android:drawable/ic_popup_sync"
+            android:iconTint="@color/white"/>
+        <item
+            android:id="@+id/action_group"
+            android:title="Group"
+            android:iconTint="@color/white"/>
+    </group>
+    <item
+        android:id="@+id/actionSearch"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+</menu>
