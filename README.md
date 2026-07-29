@@ -1,8 +1,8 @@
 # 📋 TaskMaster
 
-TaskMaster is a comprehensive Android productivity and task management application built around an offline-first architecture.
+TaskMaster is an Android productivity application built with an offline-first architecture. It helps users organize tasks, manage recurring schedules, track productivity, plan work with a calendar, and synchronize data across devices.
 
-The application combines task management, reminders, recurring schedules, productivity analytics, calendar planning, focus sessions, synchronization, and reporting into a single productivity platform.
+The application is designed using Clean Architecture to keep the codebase modular, maintainable, and scalable.
 
 ---
 
@@ -11,139 +11,63 @@ The application combines task management, reminders, recurring schedules, produc
 ### Task Management
 
 * Create, edit, archive, and delete tasks
-* Categories and tagging
-* Priority management
-* Scheduled tasks
+* Categories, tags, and priorities
+* Due dates and reminders
 * Recurring tasks
 * Subtasks
 
-### Productivity Tracking
+### Productivity
 
-* Task completion analytics
-* Daily productivity insights
-* Productivity trends
-* Time tracking
 * Focus sessions
+* Time tracking
+* Daily productivity insights
+* Completion statistics
+* Productivity trends
 
-### Calendar Planning
+### Calendar
 
-* Calendar-based task organization
-* Daily scheduling
-* Task visualization
-* Deadline tracking
+* Calendar-based task planning
+* Daily schedule view
+* Deadline visualization
 
 ### Reminders
 
 * Scheduled notifications
 * Recurring reminders
-* Background reminder service
-
-### Reports & Analytics
-
-* Daily productivity reports
-* Completion statistics
-* Time utilization tracking
-* Trend analysis
+* Background reminder service using WorkManager
 
 ### Data Management
 
 * Offline-first architecture
-* Room Database
+* Room database
 * Firebase synchronization
-* CSV export
 * Backup and restore
+* CSV export
 
 ---
 
 ## Architecture
 
+The project follows **Clean Architecture**, separating responsibilities into Presentation, Domain, and Data layers.
+
 ```mermaid
 graph TD
 
-UI[UI Layer]
-
+UI[Presentation]
 VM[ViewModels]
-
-DOMAIN[Domain Layer]
-
+DOMAIN[Domain]
 REPO[Repositories]
-
-LOCAL[Room Database]
-
+ROOM[Room Database]
 SYNC[Sync Manager]
-
 FIREBASE[Firebase]
 
 UI --> VM
 VM --> DOMAIN
 DOMAIN --> REPO
-
-REPO --> LOCAL
+REPO --> ROOM
 REPO --> SYNC
-
 SYNC --> FIREBASE
 ```
-
----
-
-## Clean Architecture Structure
-
-### Presentation Layer
-
-* Activities
-* Fragments
-* Adapters
-* ViewModels
-
-### Domain Layer
-
-* Use Cases
-* Business Rules
-* Analytics Engine
-* Domain Models
-
-### Data Layer
-
-* Repositories
-* Room Database
-* Firebase Services
-* Synchronization
-
----
-
-## Key Modules
-
-### Task Module
-
-* Task creation
-* Task editing
-* Recurring tasks
-* Task details
-* Task logs
-
-### Calendar Module
-
-* Calendar planning
-* Daily views
-* Scheduling
-
-### Analytics Module
-
-* Productivity insights
-* Completion statistics
-* Trend reporting
-
-### Timer Module
-
-* Focus sessions
-* Stopwatch
-* Pomodoro workflows
-
-### Sync Module
-
-* Firebase integration
-* Offline-first synchronization
-* Conflict handling
 
 ---
 
@@ -152,12 +76,12 @@ SYNC --> FIREBASE
 | Category         | Technology               |
 | ---------------- | ------------------------ |
 | Language         | Java                     |
+| UI               | Android XML              |
 | Architecture     | Clean Architecture       |
-| Database         | Room SQLite              |
+| Database         | Room (SQLite)            |
 | Cloud Sync       | Firebase                 |
 | Background Tasks | WorkManager              |
 | Notifications    | Android Notification API |
-| UI               | Android XML              |
 | Navigation       | Navigation Component     |
 
 ---
@@ -165,11 +89,23 @@ SYNC --> FIREBASE
 ## Project Structure
 
 ```text
-core/
-data/
-domain/
-ui/
-viewmodel/
+app/
+├── core/
+├── data/
+│   ├── local/
+│   ├── remote/
+│   └── repository/
+├── domain/
+│   ├── model/
+│   ├── repository/
+│   └── usecase/
+├── ui/
+│   ├── activities/
+│   ├── fragments/
+│   ├── adapters/
+│   └── dialogs/
+├── viewmodel/
+└── worker/
 ```
 
 ---
@@ -177,65 +113,63 @@ viewmodel/
 ## Application Flow
 
 ```text
-Task Creation
-      ↓
-Local Storage
-      ↓
-Reminder Scheduling
-      ↓
-Task Execution
-      ↓
-Analytics Generation
-      ↓
-Synchronization
-      ↓
-Reporting
+Create Task
+      │
+      ▼
+Save to Room Database
+      │
+      ▼
+Schedule Reminder
+      │
+      ▼
+User Completes Task
+      │
+      ▼
+Generate Analytics
+      │
+      ▼
+Synchronize with Firebase
 ```
 
 ---
 
-## Productivity Features
+## Planned Features
 
-### Analytics
-
-* Completion rates
-* Productivity trends
-* Daily performance reports
-* Time spent analysis
-
-### Time Management
-
-* Stopwatch
-* Focus sessions
-* Task duration tracking
-
-### Reporting
-
-* Daily reports
-* CSV exports
-* Historical logs
+* Kanban board
+* Habit tracking
+* AI-assisted scheduling
+* Improved cloud backup
+* Team collaboration
+* Desktop application
+* Web application
 
 ---
 
-## Future Roadmap
+## Screenshots
 
-### Planned
+<p align="center">
+  <img src="ScreenShots/Login.jpg" width="220">
+  <img src="ScreenShots/Home.jpg" width="220">
+  <img src="ScreenShots/Insights_1.jpg" width="220">
+  <img src="ScreenShots/Insights_2.jpg" width="220">
+</p>
 
-* Cloud backup improvements
-* Team collaboration
-* Kanban board view
-* AI-powered scheduling
-* Habit tracking
+<p align="center">
+  <img src="ScreenShots/Task_Details.jpg" width="220">
+  <img src="ScreenShots/Task_Analytics_1.jpg" width="220">
+  <img src="ScreenShots/Task_Analytics_2.jpg" width="220">
+  <img src="ScreenShots/Task_Logs.jpg" width="220">
+</p>
 
-### Long-Term
-
-* Web application
-* Desktop application
-* Shared workspaces
-* Real-time collaboration
+<p align="center">
+  <img src="ScreenShots/Calendar.jpg" width="220">
+  <img src="ScreenShots/Settings.jpg" width="220">
+</p>
 
 ---
 
 ## License
 
-Licensed under the MIT License.
+This project is currently **unlicensed**.
+
+All rights are reserved by the author unless a license is added in the future.
